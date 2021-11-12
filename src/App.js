@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import data from './data.json';
 
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -12,7 +13,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home/>} />
-        <Route path='/destination' element={<Destination/>} />
+        <Route path='/destination' element={<Destination {...data}/>} />
         <Route path='/crew' element={<Crew/>} />
         <Route path='/technology' element={<Technology/>} />
       </Routes>
