@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-const Destination = ({destinations}) => {
+const Destination = ({ destinations }) => {
   const [planetIndex, setPlanetIndex] = useState(0);
   const planet = destinations[planetIndex];
-
-  console.log(destinations)
 
   return (
     <div>

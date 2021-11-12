@@ -8,14 +8,15 @@ import Crew from './pages/Crew';
 import Technology from './pages/Technology';
 
 const App = () => {
+  console.log(data);
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home/>} />
         <Route path='/destination' element={<Destination {...data}/>} />
-        <Route path='/crew' element={<Crew/>} />
-        <Route path='/technology' element={<Technology/>} />
+        <Route path='/crew' element={<Crew {...data} />} />
+        <Route path='/technology' element={<Technology {...data} />} />
       </Routes>
     </Router>
   );
