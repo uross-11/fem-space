@@ -8,7 +8,7 @@ const Crew = ({ crew }) => {
 
   return (
     <div>
-      <h1><span>02</span> MEET YOUR CREW</h1>
+      <h5><span>02</span> MEET YOUR CREW</h5>
       <section>
         <div>
           <img src={member.images.png} alt={`${member.name}-img`} />
@@ -22,8 +22,8 @@ const Crew = ({ crew }) => {
             <button onClick={() => {setMemberIndex(3)}}>O</button>
           </div>
           <div>
-            <h2>{member.role}</h2>
-            <span>{member.name}</span>
+            <h4>{member.role}</h4>
+            <h3>{member.name}</h3>
             <p>{member.bio}</p>
           </div>
         </div>

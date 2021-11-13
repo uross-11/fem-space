@@ -1,4 +1,102 @@
-body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+h1,
+h2,
+h3,
+h4,
+p,
+.subheading1,
+.explore {
+  font-family: 'Bellefair', serif;
+}
+
+h5,
+.subheading2 {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+
+  @include breakpoint-up(medium) {
+    font-size: 150px;
+  }
+}
+h2 {
+  font-size: 56px;
+
+  @include breakpoint-up(medium) {
+    font-size: 80px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 100px;
+  }
+}
+h3 {
+  font-size: 24px;
+
+  @include breakpoint-up(medium) {
+    font-size: 40px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 56px;
+  }
+}
+h4 {
+  font-size: 16px;
+
+  @include breakpoint-up(medium) {
+    font-size: 24px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 32px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+
+  @include breakpoint-up(medium) {
+    font-size: 24px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 28px;
+  }
+  letter-spacing: 4.725px;
+}
+
+p {
+  font-size: 15px;
+
+  @include breakpoint-up(medium) {
+    font-size: 16px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 18px;
+  }
+}
+
+.subheading1 {
+  font-size: 28px;
+}
+
+.subheading2 {
+  font-size: 14px;
+  letter-spacing: 2.3625px;
+}
+
+.nav {
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+.explore {
+  font-size: 20px;
+
+  @include breakpoint-up(medium) {
+    font-size: 32px;
+  }
 }

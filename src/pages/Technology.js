@@ -6,7 +6,7 @@ const Technology = ({ technology }) => {
 
   return (
     <div>
-      <h1><span>03</span> SPACE LAUNCH 101</h1>
+      <h5><span>03</span> SPACE LAUNCH 101</h5>
       <section>
         <img src={tech.images.landscape} alt={`${tech.name}-img`} />
         <div>
@@ -16,8 +16,8 @@ const Technology = ({ technology }) => {
             <button onClick={() => {setTechIndex(2)}}>3</button>
           </div>
           <div>
-            <span>THE TERMINOLOGY …</span>
-            <h2>{tech.name}</h2>
+            <span className='nav'>THE TERMINOLOGY …</span>
+            <h3>{tech.name}</h3>
             <p>{tech.description}</p>
           </div>
         </div>

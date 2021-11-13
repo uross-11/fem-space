@@ -6,7 +6,7 @@ const Destination = ({ destinations }) => {
 
   return (
     <div>
-      <h1><span>01</span> PICK YOUR DESTINATION</h1>
+      <h5><span>01</span> PICK YOUR DESTINATION</h5>
       <section>
         <img src={planet.images.png} alt={`${planet.name}-img`} />
         <div>
@@ -21,12 +21,12 @@ const Destination = ({ destinations }) => {
           {/* horizontal line */}
           <div>
             <div className="distance">
-              <h3>AVG. DISTANCE</h3>
-              <span>{planet.distance}</span>
+              <span className='subheading2'>AVG. DISTANCE</span>
+              <span className='subheading1'>{planet.distance}</span>
             </div>
             <div className="traveltime">
-              <h3>EST. TRAVEL TIME</h3>
-              <span>{planet.travel}</span>
+              <span className='subheading2'>EST. TRAVEL TIME</span>
+              <span className='subheading1'>{planet.travel}</span>
             </div>
           </div>
         </div>

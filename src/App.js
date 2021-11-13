@@ -7,6 +7,8 @@ import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
 
+import './styles/main.scss';
+
 const App = () => {
   return (
     <Router>
