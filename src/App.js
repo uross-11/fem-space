@@ -8,7 +8,6 @@ import Crew from './pages/Crew';
 import Technology from './pages/Technology';
 
 const App = () => {
-  console.log(data);
   return (
     <Router>
       <Navbar />
