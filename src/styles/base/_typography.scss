@@ -5,6 +5,7 @@ h4,
 p,
 .subheading1,
 .explore {
+  color: $white;
   font-family: 'Bellefair', serif;
   font-style: normal;
   font-weight: normal;
@@ -13,11 +14,17 @@ p,
 h5,
 .subheading2,
 .nav {
+  color: $white;
   font-family: 'Barlow Condensed', sans-serif;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
 }
 
 h1 {
   font-size: 80px;
+  line-height: 100px;
 
   @include breakpoint-up(medium) {
     font-size: 150px;
@@ -72,6 +79,7 @@ h5 {
 
 p {
   font-size: 15px;
+  line-height: 25px;
 
   @include breakpoint-up(medium) {
     font-size: 16px;
@@ -102,6 +110,11 @@ p {
 
 .explore {
   font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  letter-spacing: 1.25px;
+  color: $dark-blue;
 
   @include breakpoint-up(medium) {
     font-size: 32px;

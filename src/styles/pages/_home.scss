@@ -1,3 +1,28 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
+.home {
+  text-align: center;
+  height: 100%;
+
+  &__title {
+    margin-top: 83px;
+  }
+
+  &__text {
+    margin-top: 16px;
+
+    opacity: 0.7;
+  }
+
+  &__cta {
+    margin-top: 81px;
+    margin-bottom: 48px;
+    height: 150px;
+    width: 150px;
+    border: none;
+    border-radius: 50%;
+    background-color: $white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
