@@ -6,10 +6,13 @@ p,
 .subheading1,
 .explore {
   font-family: 'Bellefair', serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
 h5,
-.subheading2 {
+.subheading2,
+.nav {
   font-family: 'Barlow Condensed', sans-serif;
 }
 
@@ -91,6 +94,10 @@ p {
 .nav {
   font-size: 16px;
   letter-spacing: 2.7px;
+
+  /* span {
+    font-weight: bold;
+  } */
 }
 
 .explore {

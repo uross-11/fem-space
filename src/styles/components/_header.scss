@@ -1,0 +1,35 @@
+.header {
+  /* desktop */
+  width: 100%;
+  margin-left: 55px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* &__logo {
+  } */
+
+  &__line {
+    position: absolute;
+    width: 473px;
+    height: 1px;
+    margin-left: 110px;
+    background-color: black;
+  }
+
+  &__links {
+    padding-right: 165px;
+    padding-left: 123px;
+    background-color: gray;
+
+    &__link {
+      display: inline-block;
+      padding: 38px 0;
+
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
+    }
+  }
+}

@@ -4,8 +4,6 @@ const Crew = ({ crew }) => {
   const [memberIndex, setMemberIndex] = useState(0);
   const member = crew[memberIndex];
 
-  console.log(crew)
-
   return (
     <div>
       <h5><span>02</span> MEET YOUR CREW</h5>
