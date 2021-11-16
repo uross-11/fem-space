@@ -11,6 +11,14 @@
     margin-top: 40px;
   }
 
+  &__logo {
+    width: 40px;
+
+    @include breakpoint-up(medium) {
+      width: 48px;
+    }
+  }
+
   &__toggle {
     background: none;
     border: none;

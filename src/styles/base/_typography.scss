@@ -13,13 +13,17 @@ p,
 
 h5,
 .subheading2,
-.nav {
+.nav,
+.destination__select__link {
   color: $white;
   font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
 p {
   font-family: 'Barlow', sans-serif;
+  color: $gray;
 }
 
 h1 {
@@ -66,6 +70,7 @@ h4 {
 
 h5 {
   font-size: 16px;
+  letter-spacing: 2.7px;
 
   @include breakpoint-up(medium) {
     font-size: 24px;
@@ -73,8 +78,8 @@ h5 {
 
   @include breakpoint-up(large) {
     font-size: 28px;
+    letter-spacing: 4.725px;
   }
-  letter-spacing: 4.725px;
 }
 
 p {
@@ -97,15 +102,13 @@ p {
 .subheading2 {
   font-size: 14px;
   letter-spacing: 2.3625px;
+
+  color: $gray;
 }
 
 .nav {
   font-size: 16px;
   letter-spacing: 2.7px;
-
-  /* span {
-    font-weight: bold;
-  } */
 }
 
 .explore {
@@ -119,4 +122,11 @@ p {
   @include breakpoint-up(medium) {
     font-size: 32px;
   }
+}
+
+.destination__select__link {
+  font-size: 14px;
+  color: $gray;
+  letter-spacing: 2.36px;
+  line-height: 18.8px;
 }

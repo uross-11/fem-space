@@ -23,12 +23,12 @@
 
 // 5. Components
 @import
-  'components/button',
   'components/header';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/destination';
 
 // 7. Themes
 @import

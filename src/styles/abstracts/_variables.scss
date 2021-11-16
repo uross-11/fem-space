@@ -1,7 +1,8 @@
 // Colors
 $dark-blue: hsl(230, 35%, 7%);
 $light-blue: hsl(231, 77%, 90%);
-$white: #ffffff;
+$white: hsl(0, 0%, 100%);
+$gray: hsl(231, 77%, 90%);
 
 // MQ breakpoints 640px, 1024px, 1400px
 $breakpoints-up: (
