@@ -14,7 +14,8 @@ p,
 h5,
 .subheading2,
 .header,
-.destination__select__link {
+.destination__select__link,
+.technology__term {
   color: $white;
   font-family: 'Barlow Condensed', sans-serif;
   font-style: normal;
@@ -139,4 +140,14 @@ p {
   span {
     font-weight: bold;
   }
+}
+
+.technology__term {
+  color: hsl(231, 77%, 90%);
+  font-size: 14px;
+  letter-spacing: 2.3625px;
+}
+
+.technology__select__link {
+  color: $white;
 }

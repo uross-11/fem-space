@@ -11,15 +11,12 @@
   }
 
   &__cta {
+    cursor: pointer;
     margin-top: 81px;
     height: 150px;
     width: 150px;
     border: none;
     border-radius: 50%;
     background-color: $white;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
