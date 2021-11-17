@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className='header container'>
       <img className='header__logo' src={logo} alt={`logo-img`} />
       <div className='header__line hide-for-mobile'></div>
-      <div className='header__links hide-for-mobile nav'>
+      <div className='header__links hide-for-mobile'>
         <Link to='/' className='header__links__link'><span>01</span> HOME</Link>
         <Link to='/destination' className='header__links__link'><span>02</span> DESTINATION</Link>
         <Link to='/crew' className='header__links__link'><span>03</span> CREW</Link>
@@ -26,11 +26,11 @@ const Navbar = () => {
         </button>
       }
       {isMenuOpen && 
-        <div className='header__mobile nav'>
-          <Link to='/' className='header__links__link'><span>01</span> HOME</Link>
-          <Link to='/destination' className='header__links__link'><span>02</span> DESTINATION</Link>
-          <Link to='/crew' className='header__links__link'><span>03</span> CREW</Link>
-          <Link to='/technology' className='header__links__link'><span>04</span> TECHNOLOGY</Link>
+        <div className='header__mobile'>
+          <Link to='/' className='header__mobile__link'><span>01</span> HOME</Link>
+          <Link to='/destination' className='header__mobile__link'><span>02</span> DESTINATION</Link>
+          <Link to='/crew' className='header__mobile__link'><span>03</span> CREW</Link>
+          <Link to='/technology' className='header__mobile__link'><span>04</span> TECHNOLOGY</Link>
         </div>
       }
     </nav>

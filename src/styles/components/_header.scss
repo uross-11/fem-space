@@ -20,6 +20,7 @@
   }
 
   &__toggle {
+    z-index: 1;
     background: none;
     border: none;
     cursor: pointer;
@@ -56,6 +57,34 @@
         &:not(:last-child) {
           margin-right: 48px;
         }
+      }
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    position: absolute;
+    height: 100vh;
+    width: 254px;
+    bottom: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(81.5485px);
+
+    &__link {
+      padding-left: 32px;
+      padding: 16px 0 16px 32px;
+
+      span {
+        margin-right: 5px;
+      }
+
+      &:first-child {
+        margin-top: 113px;
       }
     }
   }

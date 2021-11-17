@@ -13,7 +13,7 @@ p,
 
 h5,
 .subheading2,
-.nav,
+.header,
 .destination__select__link {
   color: $white;
   font-family: 'Barlow Condensed', sans-serif;
@@ -106,7 +106,7 @@ p {
   color: $gray;
 }
 
-.nav {
+.header {
   font-size: 16px;
   letter-spacing: 2.7px;
 }
@@ -129,4 +129,14 @@ p {
   color: $gray;
   letter-spacing: 2.36px;
   line-height: 18.8px;
+}
+
+.header__mobile {
+  a {
+    color: $white;
+  }
+
+  span {
+    font-weight: bold;
+  }
 }
