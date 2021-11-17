@@ -1,33 +1,14 @@
 import React, { useState } from 'react';
 
+import useImportImages from '../useImportImages';
+import useSwitchImage from '../useSwitchImage';
+
 const Destination = ({ destinations }) => {
   const [planetIndex, setPlanetIndex] = useState(0);
   const planet = destinations[planetIndex];
-
-  // https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
-  const importAll = r => {
-    return r.keys().map(r);
-  }
-  const images = importAll(require.context('../assets/destination', true, /image/));
-  /////////////////////////
-
-  let image = '';
-  switch (planet.name) {
-    case 'Moon':
-      image = images[2].default;
-      break;
-    case 'Mars':
-      image = images[1].default;
-      break;
-    case 'Europa':
-      image = images[0].default;
-      break;
-    case 'Titan':
-      image = images[3].default;
-      break;
-    default:
-      image = images[2].default;
-  }
+  const images = useImportImages();
+  const check = planet.name.toLowerCase();
+  const image = useSwitchImage(images, check);
 
   return (
     <div className='destination container'>
@@ -44,7 +25,6 @@ const Destination = ({ destinations }) => {
           <h2 className='destination__h1'>{planet.name.toUpperCase()}</h2>
           <p className='destination__text'>{planet.description}</p>
           <div className='destination__line hide-for-desktop'></div>
-          {/* horizontal line */}
           <div>
             <div className="destination__distance">
               <span className='subheading2'>AVG. DISTANCE</span>

@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 
+import useSwitchImage from '../useSwitchImage';
+import useImportImages from '../useImportImages';
+
 const Crew = ({ crew }) => {
   const [memberIndex, setMemberIndex] = useState(0);
   const member = crew[memberIndex];
+  const images = useImportImages();
+  const check = member.name.split(' ')[0].toLowerCase(); 
+  const image = useSwitchImage(images, check);
 
   return (
     <div>
       <h5><span>02</span> MEET YOUR CREW</h5>
       <section>
         <div>
-          <img src={member.images.png} alt={`${member.name}-img`} />
+          <img src={image} alt={`${member.name}-img`} />
           {/* horizontal line on mobile */}
         </div>
         <div>
