@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-import useImportImages from '../useImportImages';
-import useSwitchImage from '../useSwitchImage';
+import { useImportImages, useSwitchImage } from '../helpers';
 
 const Destination = ({ destinations }) => {
   const [planetIndex, setPlanetIndex] = useState(0);

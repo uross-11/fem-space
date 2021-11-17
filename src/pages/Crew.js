@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
-import useSwitchImage from '../useSwitchImage';
-import useImportImages from '../useImportImages';
+import { useImportImages, useSwitchImage } from '../helpers';
 
 const Crew = ({ crew }) => {
   const [memberIndex, setMemberIndex] = useState(0);
