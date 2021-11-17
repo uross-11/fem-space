@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const useImportImages = () => {
   // https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack

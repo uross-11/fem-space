@@ -10,24 +10,28 @@ const Crew = ({ crew }) => {
   const image = useSwitchImage(images, check);
 
   return (
-    <div>
-      <h5><span>02</span> MEET YOUR CREW</h5>
+    <div className='crew container'>
+      <h5 className='crew__h5'><span>02</span> MEET YOUR CREW</h5>
       <section>
         <div>
-          <img src={image} alt={`${member.name}-img`} />
-          {/* horizontal line on mobile */}
+          <img className='crew__image' src={image} alt={`${member.name}-img`} />
+          {useWindowWidth() <= 375 &&
+            <div className='crew__line'>
+              <div></div>
+            </div>
+          }
         </div>
         <div>
-          <div>
-            <button onClick={() => {setMemberIndex(0)}}>O</button>
-            <button onClick={() => {setMemberIndex(1)}}>O</button>
-            <button onClick={() => {setMemberIndex(2)}}>O</button>
-            <button onClick={() => {setMemberIndex(3)}}>O</button>
+          <div className='crew__select'>
+            <button className='crew__select__link' onClick={() => {setMemberIndex(0)}}></button>
+            <button className='crew__select__link' onClick={() => {setMemberIndex(1)}}></button>
+            <button className='crew__select__link' onClick={() => {setMemberIndex(2)}}></button>
+            <button className='crew__select__link' onClick={() => {setMemberIndex(3)}}></button>
           </div>
           <div>
-            <h4>{member.role}</h4>
-            <h3>{member.name}</h3>
-            <p>{member.bio}</p>
+            <h4 className='crew__role'>{member.role.toUpperCase()}</h4>
+            <h3 className='crew__name'>{member.name.toUpperCase()}</h3>
+            <p className='crew__text'>{member.bio}</p>
           </div>
         </div>
       </section>

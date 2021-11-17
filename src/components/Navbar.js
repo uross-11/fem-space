@@ -14,10 +14,10 @@ const Navbar = () => {
       <img className='header__logo' src={logo} alt={`logo-img`} />
       <div className='header__line hide-for-mobile'></div>
       <div className='header__links hide-for-mobile'>
-        <Link to='/' className='header__links__link'><span>01</span> HOME</Link>
-        <Link to='/destination' className='header__links__link'><span>02</span> DESTINATION</Link>
-        <Link to='/crew' className='header__links__link'><span>03</span> CREW</Link>
-        <Link to='/technology' className='header__links__link'><span>04</span> TECHNOLOGY</Link>
+        <Link to='/' className='header__links__link'><span>00</span> HOME</Link>
+        <Link to='/destination' className='header__links__link'><span>01</span> DESTINATION</Link>
+        <Link to='/crew' className='header__links__link'><span>02</span> CREW</Link>
+        <Link to='/technology' className='header__links__link'><span>03</span> TECHNOLOGY</Link>
       </div>
       <div className='line'></div>
       {useWindowWidth() <= 375 && 
@@ -27,10 +27,10 @@ const Navbar = () => {
       }
       {isMenuOpen && 
         <div className='header__mobile'>
-          <Link to='/' className='header__mobile__link'><span>01</span> HOME</Link>
-          <Link to='/destination' className='header__mobile__link'><span>02</span> DESTINATION</Link>
-          <Link to='/crew' className='header__mobile__link'><span>03</span> CREW</Link>
-          <Link to='/technology' className='header__mobile__link'><span>04</span> TECHNOLOGY</Link>
+          <Link to='/' className='header__mobile__link'><span>00</span> HOME</Link>
+          <Link to='/destination' className='header__mobile__link'><span>01</span> DESTINATION</Link>
+          <Link to='/crew' className='header__mobile__link'><span>02</span> CREW</Link>
+          <Link to='/technology' className='header__mobile__link'><span>03</span> TECHNOLOGY</Link>
         </div>
       }
     </nav>
