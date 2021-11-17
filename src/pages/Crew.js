@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useImportImages, useSwitchImage } from '../helpers';
+import { useImportImages, useSwitchImage, useWindowWidth } from '../helpers';
 
 const Crew = ({ crew }) => {
   const [memberIndex, setMemberIndex] = useState(0);
+
   const member = crew[memberIndex];
   const images = useImportImages();
   const check = member.name.split(' ')[0].toLowerCase(); 
