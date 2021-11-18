@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useWindowWidth } from '../hooks/helpers';
 
 import logo from '../assets/shared/logo.svg'
-import hamburger from '../assets/shared/icon-hamburger.svg'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,9 +32,15 @@ const Header = () => {
     }
   }, [isMenuOpen, location])
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location])
+
   return (
     <nav className='header container'>
-      <img className='header__logo' src={logo} alt={`logo-img`} />
+      <Link to='/'>
+        <img className='header__logo' src={logo} alt={`logo-img`} />
+      </Link>
       <div className='header__line hide-for-mobile'></div>
       <div className='header__links hide-for-mobile'>
         <Link to='/' className='header__links__link'><span>00</span> HOME</Link>
@@ -44,9 +49,10 @@ const Header = () => {
         <Link to='/technology' className='header__links__link'><span>03</span> TECHNOLOGY</Link>
       </div>
       <div className='line'></div>
+      {/* Move to css */}
       {useWindowWidth() <= 375 && 
         <button onClick={() => {setIsMenuOpen(!isMenuOpen)}} className='header__toggle'>
-          <img src={hamburger} alt={`hamburger-img`} />
+          <span></span><span></span><span></span>
         </button>
       }
       {isMenuOpen && 

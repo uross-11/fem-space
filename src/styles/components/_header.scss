@@ -25,9 +25,17 @@
     border: none;
     cursor: pointer;
 
-    img {
-      margin-top: 4px;
+    span {
+      display: block;
+      height: 3px;
+      width: 24px;
+      background: $white;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
     }
+
   }
 
   &__line {
