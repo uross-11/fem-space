@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import data from './data.json';
 
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
@@ -12,7 +12,7 @@ import './styles/main.scss';
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <Routes>
         <Route exact path='/' element={<Home/>} />
         <Route path='/destination' element={<Destination {...data}/>} />

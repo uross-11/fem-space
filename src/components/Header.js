@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useWindowWidth } from '../helpers';
@@ -6,8 +6,16 @@ import { useWindowWidth } from '../helpers';
 import logo from '../assets/shared/logo.svg'
 import hamburger from '../assets/shared/icon-hamburger.svg'
 
-const Navbar = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen])
 
   return (
     <nav className='header container'>
@@ -37,4 +45,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;
+export default Header;
