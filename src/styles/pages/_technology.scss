@@ -35,6 +35,13 @@
         margin-right: 16px;
       }
     }
+
+    .selected,
+    .selected:hover {
+      border: 1px $white solid;
+      background: $white;
+      color: $dark-blue;
+    }
   }
 
   &__term {

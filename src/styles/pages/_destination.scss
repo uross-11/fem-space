@@ -20,6 +20,7 @@
     height: 28px;
     margin-top: 26px;
 
+
     &__link {
       border: none;
       margin: 0;
@@ -35,6 +36,12 @@
       &:not(:last-child) {
         margin-right: 26px;
       }
+    }
+
+    .selected,
+    .selected:hover {
+      color: $white;
+      border-bottom: 3px hsl(0, 0%, 100%) solid;
     }
   }
 

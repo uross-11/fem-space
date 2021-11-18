@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { useWindowWidth } from '../helpers';
+import { useWindowWidth } from '../hooks/helpers';
 
 import logo from '../assets/shared/logo.svg'
 import hamburger from '../assets/shared/icon-hamburger.svg'

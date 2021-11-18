@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { useImportImages, useSwitchImage, useWindowWidth } from '../helpers';
+import React, { useState, useRef } from 'react';
+import { useImportImages, useSwitchImage, useWindowWidth } from '../hooks/helpers';
+import useSelect from '../hooks/useSelect';
 
 const Crew = ({ crew }) => {
   const [memberIndex, setMemberIndex] = useState(0);
@@ -8,6 +9,9 @@ const Crew = ({ crew }) => {
   const images = useImportImages();
   const check = member.name.split(' ')[0].toLowerCase(); 
   const image = useSwitchImage(images, check);
+
+  const selectRef = useRef();
+  useSelect(selectRef, member);
 
   return (
     <div className='crew container'>
@@ -22,11 +26,11 @@ const Crew = ({ crew }) => {
           }
         </div>
         <div>
-          <div className='crew__select'>
-            <button className='crew__select__link' onClick={() => {setMemberIndex(0)}}></button>
-            <button className='crew__select__link' onClick={() => {setMemberIndex(1)}}></button>
-            <button className='crew__select__link' onClick={() => {setMemberIndex(2)}}></button>
-            <button className='crew__select__link' onClick={() => {setMemberIndex(3)}}></button>
+          <div ref={selectRef} className='crew__select'>
+            <button id='douglas' className='crew__select__link' onClick={() => {setMemberIndex(0)}}></button>
+            <button id='mark' className='crew__select__link' onClick={() => {setMemberIndex(1)}}></button>
+            <button id='victor' className='crew__select__link' onClick={() => {setMemberIndex(2)}}></button>
+            <button id='anousheh' className='crew__select__link' onClick={() => {setMemberIndex(3)}}></button>
           </div>
           <div>
             <h4 className='crew__role'>{member.role.toUpperCase()}</h4>

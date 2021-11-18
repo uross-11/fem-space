@@ -5,7 +5,7 @@ export const useImportImages = () => {
   const importAll = r => {
     return r.keys().map(r);
   }
-  const images = importAll(require.context('./assets/', true, /image/));
+  const images = importAll(require.context('../assets/', true, /image/));
 
   return images;
 }
