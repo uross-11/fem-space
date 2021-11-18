@@ -24,7 +24,7 @@ const Destination = ({ destinations }) => {
             <button id='europa' className='destination__select__link' onClick={() => {setPlanetIndex(2)}}>EUROPA</button>
             <button id='titan' className='destination__select__link' onClick={() => {setPlanetIndex(3)}}>TITAN</button>
           </div>
-          <h2 className='destination__h1'>{planet.name.toUpperCase()}</h2>
+          <h2 className='destination__h2'>{planet.name.toUpperCase()}</h2>
           <p className='destination__text'>{planet.description}</p>
           <div className='destination__line hide-for-desktop'></div>
           <div>

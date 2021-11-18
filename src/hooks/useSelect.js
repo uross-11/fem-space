@@ -4,7 +4,7 @@ const useSelect = (ref, page) => {
 
   useEffect(() => {
     const arr = ref.current.children;
-    const len = ref.current.children.length;
+    const len = arr.length;
     const name = page.name.split(' ')[0].toLowerCase();
 
     for (let i = 0; i < len; i++) {
