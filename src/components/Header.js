@@ -6,12 +6,12 @@ import { useWindowWidth } from '../hooks/helpers';
 import logo from '../assets/shared/logo.svg'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const selectRef = useRef();
   const location = useLocation().pathname;
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isSidebarOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -30,10 +30,10 @@ const Header = () => {
         }
       }
     }
-  }, [isMenuOpen, location])
+  }, [isSidebarOpen, location])
 
   useEffect(() => {
-    setIsMenuOpen(false);
+    setIsSidebarOpen(false);
   }, [location])
 
   return (
@@ -51,12 +51,12 @@ const Header = () => {
       <div className='line'></div>
       {/* Move to css */}
       {useWindowWidth() <= 375 && 
-        <button onClick={() => {setIsMenuOpen(!isMenuOpen)}} className='header__toggle'>
+        <button onClick={() => {setIsSidebarOpen(!isSidebarOpen)}} className='header__toggle'>
           <span></span><span></span><span></span>
         </button>
       }
-      {isMenuOpen && 
-        <div id='header-select' ref={selectRef} className='header__mobile'>
+      {isSidebarOpen && 
+        <div id='header-select' ref={selectRef} className='header__sidebar'>
           <Link id='/' to='/' className='header__mobile__link'><span>00</span> HOME</Link>
           <Link id='/destination' to='/destination' className='header__mobile__link'><span>01</span> DESTINATION</Link>
           <Link id='/crew' to='/crew' className='header__mobile__link'><span>02</span> CREW</Link>
