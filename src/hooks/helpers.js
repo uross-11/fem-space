@@ -11,7 +11,7 @@ export const useImportImages = () => {
 }
 
 export const useSwitchImage = (images, check, orientation) => {
-
+  if (!images || !check) return;
   let image;
   image = images.map(img => img.default).filter(img => img.match(check));
 
