@@ -110,6 +110,26 @@ p {
 .header {
   font-size: 16px;
   letter-spacing: 2.7px;
+
+  a {
+    color: $white;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  @include breakpoint-up(medium) {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+    line-height: 16.8px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+  }
 }
 
 .explore {

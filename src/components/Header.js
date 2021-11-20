@@ -41,20 +41,28 @@ const Header = () => {
       <Link to='/'>
         <img className='header__logo' src={logo} alt={`logo-img`} />
       </Link>
-      <div className='header__line hide-for-mobile'></div>
+      <div className='header__line hide-for-tablet'></div>
       <div className='header__links hide-for-mobile'>
-        <Link to='/' className='header__links__link'><span>00</span> HOME</Link>
-        <Link to='/destination' className='header__links__link'><span>01</span> DESTINATION</Link>
-        <Link to='/crew' className='header__links__link'><span>02</span> CREW</Link>
-        <Link to='/technology' className='header__links__link'><span>03</span> TECHNOLOGY</Link>
+        <Link to='/' className='header__links__link'>
+          <span className='hide-for-tablet'>00</span>
+          HOME
+        </Link>
+        <Link to='/destination' className='header__links__link'>
+          <span className='hide-for-tablet'>01</span>
+          DESTINATION
+        </Link>
+        <Link to='/crew' className='header__links__link'>
+          <span className='hide-for-tablet'>02</span>
+          CREW
+        </Link>
+        <Link to='/technology' className='header__links__link'>
+          <span className='hide-for-tablet'>03</span>
+          TECHNOLOGY
+        </Link>
       </div>
-      <div className='line'></div>
-      {/* Move to css */}
-      {useWindowWidth() <= 375 && 
-        <button onClick={() => {setIsSidebarOpen(!isSidebarOpen)}} className='header__toggle'>
-          <span></span><span></span><span></span>
-        </button>
-      }
+      <button onClick={() => {setIsSidebarOpen(!isSidebarOpen)}} className='header__toggle show-for-mobile'>
+        <span></span><span></span><span></span>
+      </button>
       {isSidebarOpen && 
         <div id='header-select' ref={selectRef} className='header__sidebar'>
           <Link id='/' to='/' className='header__sidebar__link'><span>00</span> HOME</Link>

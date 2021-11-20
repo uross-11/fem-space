@@ -1,7 +1,32 @@
 .container {
   margin: 0 24px;
+
+  @include breakpoint-up(medium) {
+    margin: 0;
+  }
 }
 
 .hide-for-mobile {
   display: none;
+
+  @include breakpoint-up(medium) {
+    display: block;
+  }
+}
+
+.hide-for-tablet {
+  display: none;
+
+  @include breakpoint-up(large) {
+    display: inline;
+  }
+
+}
+
+.show-for-mobile {
+  display: block;
+
+  @include breakpoint-up(medium) {
+    display: none;
+  }
 }

@@ -1,21 +1,33 @@
 .header {
   /* desktop */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 24px;
 
+  @include breakpoint-up(medium) {
+    padding-top: 0;
+    margin-left: 39px;
+    align-items: unset;
+  }
+
   @include breakpoint-up(large) {
-    width: 100%;
     margin-left: 55px;
     padding-top: 40px;
+    align-items: center;
   }
 
   &__logo {
     width: 40px;
 
     @include breakpoint-up(medium) {
+      margin-top: 24px;
       width: 48px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: 0;
     }
   }
 
@@ -35,32 +47,52 @@
         margin-bottom: 6px;
       }
     }
-
   }
 
   &__line {
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
       position: absolute;
-      width: 473px;
       height: 1px;
-      margin-left: 110px;
-      background-color: black;
+      left: 112px;
+      right: 800px;
+      background-color: $white;
+      opacity: 0.25;
     }
   }
 
   &__links {
 
+    @include breakpoint-up(medium) {
+      padding-right: 46px;
+      padding-left: 48px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(81.5485px);
+    }
+
     @include breakpoint-up(large) {
       padding-right: 165px;
       padding-left: 123px;
-      background-color: gray;
     }
 
     &__link {
+
+      span {
+        margin-right: 11px;
+      }
+
+      @include breakpoint-up(medium) {
+        display: inline-block;
+        padding: 39px 0;
+
+        &:not(:last-child) {
+          margin-right: 37px;
+        }
+      }
+    
       @include breakpoint-up(large) {
         display: inline-block;
-        padding: 38px 0;
+        padding: 39px 0;
 
         &:not(:last-child) {
           margin-right: 48px;
