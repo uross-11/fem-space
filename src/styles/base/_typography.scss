@@ -14,6 +14,7 @@ p,
 h5,
 .subheading2,
 .header,
+.home__h5,
 .destination__select__link,
 .technology__term {
   color: $white;
@@ -33,6 +34,11 @@ h1 {
 
   @include breakpoint-up(medium) {
     font-size: 150px;
+    line-height: 150px;
+  }
+
+  @include breakpoint-up(large) {
+    line-height: 172px;
   }
 }
 h2 {
@@ -76,11 +82,6 @@ h5 {
   @include breakpoint-up(medium) {
     font-size: 24px;
   }
-
-  @include breakpoint-up(large) {
-    font-size: 28px;
-    letter-spacing: 4.725px;
-  }
 }
 
 p {
@@ -89,10 +90,12 @@ p {
 
   @include breakpoint-up(medium) {
     font-size: 16px;
+    line-height: 28px;
   }
 
   @include breakpoint-up(large) {
     font-size: 18px;
+    line-height: 32px;
   }
 }
 
@@ -132,6 +135,25 @@ p {
   }
 }
 
+.home {
+
+  &__h5 {
+    color: hsl(231, 77%, 90%);
+
+    @include breakpoint-up(medium) {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.38px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: 28px;
+      line-height: 33.6px;
+      letter-spacing: 4.725px;
+    }
+  }
+}
+
 .explore {
   font-size: 20px;
   font-style: normal;
@@ -142,6 +164,8 @@ p {
 
   @include breakpoint-up(medium) {
     font-size: 32px;
+    line-height: 36.67px;
+    letter-spacing: 2px;
   }
 }
 

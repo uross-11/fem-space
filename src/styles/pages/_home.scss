@@ -1,13 +1,49 @@
 .home {
   text-align: center;
   height: 100%;
+  
+  @include breakpoint-up (large) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 75px;
+  }
+
+  @include breakpoint-up(xlarge) {
+    margin-top: 250px;
+    padding-bottom: 100px;
+  }
+
+  &__content {
+
+    @include breakpoint-up(large) {
+    }
+  }
+
+  &__h5 {
+    margin-top: 106px;
+
+    @include breakpoint-up (large) {
+      margin-top: 0;
+    }
+  }
 
   &__title {
     margin-top: 83px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 24px;
+    }
   }
 
   &__text {
     margin-top: 16px;
+
+    @include breakpoint-up(medium) {
+      margin: 0 auto;
+      margin-top: 24px;
+      width: 444px;
+    }
   }
 
   &__cta {
@@ -19,5 +55,17 @@
     border: none;
     border-radius: 50%;
     background-color: $white;
+
+    @include breakpoint-up(medium) {
+      height: 242px;
+      width: 242px;
+      margin-top: 156px;
+    }
+
+    @include breakpoint-up(large) {
+      height: 274px;
+      width: 274px;
+      margin: 0;
+    }
   }
 }

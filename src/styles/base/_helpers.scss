@@ -1,8 +1,24 @@
 .container {
-  margin: 0 24px;
+
+  &__header {
+
+  }
 
   @include breakpoint-up(medium) {
     margin: 0;
+  }
+
+  &__body {
+    margin: 0 24px;
+
+    @include breakpoint-up(large) {
+      margin: 0 100px;
+    }
+
+
+    @include breakpoint-up(xlarge) {
+      margin: 0 165px;
+    }
   }
 }
 
