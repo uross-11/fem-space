@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className='home container__body'>
+    <div className='home container__home'>
       <div className="home__content">
         <h5 className='home__h5 hide-for-mobile'>SO, YOU WANT TO TRAVEL TO</h5>
         <h1 className='home__title'>SPACE</h1>

@@ -1,23 +1,46 @@
 .container {
 
   &__header {
+    margin: 0 24px;
 
+    @include breakpoint-up(medium) {
+      margin-left: 39px;
+      margin-right: 0;
+    }
   }
 
-  @include breakpoint-up(medium) {
-    margin: 0;
-  }
+  &__h5 {
 
-  &__body {
+    @include breakpoint-up(medium) {
+      margin-left: 39px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 167px;
+    }
+  }
+  
+  &__home {
     margin: 0 24px;
 
     @include breakpoint-up(large) {
       margin: 0 100px;
     }
 
-
     @include breakpoint-up(xlarge) {
       margin: 0 165px;
+    }
+  }
+
+  &__destination {
+
+    @include breakpoint-up(medium) {
+      margin: 0 97px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 230px;
+      margin-right: 165px;
     }
   }
 }

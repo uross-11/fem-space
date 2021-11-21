@@ -37,7 +37,7 @@ const Header = () => {
   }, [location])
 
   return (
-    <nav className='header container'>
+    <nav className='header container__header'>
       <Link to='/'>
         <img className='header__logo' src={logo} alt={`logo-img`} />
       </Link>

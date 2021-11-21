@@ -41,17 +41,22 @@ h1 {
     line-height: 172px;
   }
 }
+
 h2 {
   font-size: 56px;
+  line-height: 64.18px;
 
   @include breakpoint-up(medium) {
     font-size: 80px;
+    line-height: 92.68px;
   }
 
   @include breakpoint-up(large) {
     font-size: 100px;
+    line-height: 114.6px;
   }
 }
+
 h3 {
   font-size: 24px;
 
@@ -63,6 +68,7 @@ h3 {
     font-size: 56px;
   }
 }
+
 h4 {
   font-size: 16px;
 
@@ -80,7 +86,15 @@ h5 {
   letter-spacing: 2.7px;
 
   @include breakpoint-up(medium) {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.38px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: 4.72px
   }
 }
 
@@ -101,13 +115,15 @@ p {
 
 .subheading1 {
   font-size: 28px;
+  line-height: 32.09px;
 }
 
 .subheading2 {
-  font-size: 14px;
-  letter-spacing: 2.3625px;
-
   color: $gray;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 2.36px;
+
 }
 
 .header {
@@ -170,10 +186,16 @@ p {
 }
 
 .destination__select__link {
-  font-size: 14px;
   color: $gray;
+  font-size: 14px;
   letter-spacing: 2.36px;
   line-height: 18.8px;
+
+  @include breakpoint-up (medium) {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+  }
 }
 
 .header__sidebar {
