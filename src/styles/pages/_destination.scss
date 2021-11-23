@@ -14,7 +14,7 @@
       margin-top: 40px;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
       margin-top: 76px;
     }
 
@@ -38,7 +38,14 @@
     @include breakpoint-up(large) {
       display: flex;
       justify-content: space-between;
+      margin-top: 16px;
+      gap: 50px;
+    }
+
+    @include breakpoint-up(xlarge) {
+      justify-content: space-around;
       margin-top: 64px;
+      gap: 157px;
     }
   }
 
@@ -54,16 +61,27 @@
     }
 
     @include breakpoint-up(large) {
+      width: 375px;
+      height: 375px;
+      margin-top: 33px;
+    }
+
+    @include breakpoint-up(xlarge) {
       width: 445px;
       height: 445px;
-      margin-top: 33px;
     }
   }
 
   &__content {
 
     @include breakpoint-up(large) {
+      width: 400px;
+      margin-top: -32px;
+    }
+
+    @include breakpoint-up(xlarge) {
       width: 472px;
+      margin-top: 0;
     }
   }
 
@@ -110,7 +128,7 @@
       margin-top: 32px;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
       margin-top: 37px;
     }
   }
@@ -120,10 +138,9 @@
 
     @include breakpoint-up(medium) {
       margin-top: 8px;
-      margin-bottom: 48px;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
       margin-top: 14px;
       margin-bottom: 54px;
     }

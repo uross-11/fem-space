@@ -16,6 +16,10 @@
     }
 
     @include breakpoint-up(large) {
+      margin-left: 55px;
+    }
+
+    @include breakpoint-up(xlarge) {
       margin-left: 167px;
     }
   }
@@ -39,6 +43,10 @@
     }
 
     @include breakpoint-up(large) {
+      margin: 0 155px;
+    }
+
+    @include breakpoint-up(xlarge) {
       margin-left: 230px;
       margin-right: 165px;
     }

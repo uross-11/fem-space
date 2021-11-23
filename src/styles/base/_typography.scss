@@ -51,7 +51,7 @@ h2 {
     line-height: 92.68px;
   }
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(xlarge) {
     font-size: 100px;
     line-height: 114.6px;
   }
@@ -91,7 +91,7 @@ h5 {
     letter-spacing: 3.38px;
   }
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(xlarge) {
     font-size: 28px;
     line-height: 33.6px;
     letter-spacing: 4.72px
@@ -109,6 +109,9 @@ p {
 
   @include breakpoint-up(large) {
     font-size: 18px;
+  }
+
+  @include breakpoint-up(large) {
     line-height: 32px;
   }
 }

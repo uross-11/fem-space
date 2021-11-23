@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { useWindowWidth } from '../hooks/helpers';
-
 import logo from '../assets/shared/logo.svg'
 
 const Header = () => {
