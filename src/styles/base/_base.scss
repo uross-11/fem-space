@@ -3,20 +3,25 @@ html {
   margin: 0;
 
   background-color: #202020;
+
+  @include breakpoint-up(medium) {
+    overflow: hidden;
+  }
+
+  @include breakpoint-up(large) {
+    overflow: unset;
+  }
 }
 
 body {
   height: 100%;
+
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-#root {
-  height: 100%;
 }
 
 a {

@@ -10,8 +10,10 @@
   }
 
   &__h5 {
+    margin-top: 24px;
 
     @include breakpoint-up(medium) {
+      margin-top: 40px;
       margin-left: 39px;
     }
 
@@ -49,6 +51,20 @@
     @include breakpoint-up(xlarge) {
       margin-left: 230px;
       margin-right: 165px;
+    }
+  }
+
+  &__crew {
+
+    @include breakpoint-up(medium) {
+      margin: 0 155px;
+    }
+  }
+
+  &__technology {
+
+    @include breakpoint-up(medium) {
+      margin: 0 155px;
     }
   }
 }

@@ -17,10 +17,12 @@ const Technology = ({ technology }) => {
 
   return (
     <div className='technology'>
-      <h5 className='technology__h5 container'><span>03</span> SPACE LAUNCH 101</h5>
+      <h5 className='technology__h5 container__h5'><span>03</span> SPACE LAUNCH 101</h5>
       <section>
-        <img className='technology__image' src={image} alt={`${tech.name}-img`} />
-        <div>
+        <div className="technology__image">
+          <img src={image} alt={`${tech.name}-img`} />
+        </div>
+        <div className='container__technology'>
           <div ref={selectRef} className='technology__select'>
             <button id='launch' className='technology__select__link' onClick={() => {setTechIndex(0)}}>1</button>
             <button id='spaceport' className='technology__select__link' onClick={() => {setTechIndex(1)}}>2</button>
