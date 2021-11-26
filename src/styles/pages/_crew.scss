@@ -2,7 +2,10 @@
   text-align: center;
 
   &__h5 {
-    margin-top: 24px;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
 
     span {
       margin-right: 8px;
@@ -11,9 +14,38 @@
     }
   }
 
+  section {
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__content {
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   &__image {
-    height: 223px;
-    margin-top: 32px;
+
+    &__img {
+      height: 223px;
+      margin-top: 32px;
+      background-size: contain;
+
+      @include breakpoint-up(medium) {
+        height: 532px;
+      }
+    }
   }
 
   &__line {
@@ -25,6 +57,11 @@
 
   &__select {
     margin-top: 32px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
 
     &__link {
       cursor: pointer;
@@ -53,6 +90,10 @@
   &__role {
     margin-top: 32px;
     opacity: 0.5;
+
+    @include breakpoint-up(medium) {
+      margin-top: 60px;
+    }
   }
 
   &__name {
@@ -62,5 +103,9 @@
   &__text {
     margin-top: 16px;
     margin-bottom: 54px;
+
+    @include breakpoint-up(medium) {
+      margin-bottom: 40px;
+    }
   }
 }

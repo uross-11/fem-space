@@ -14,18 +14,19 @@ const Crew = ({ crew }) => {
   useSelect(selectRef, member);
 
   return (
-    <div className='crew container'>
-      <h5 className='crew__h5'><span>02</span> MEET YOUR CREW</h5>
-      <section>
-        <div>
-          <img className='crew__image' src={image} alt={`${member.name}-img`} />
+    <div className='crew'>
+      <h5 className='crew__h5 container__h5'><span>02</span> MEET YOUR CREW</h5>
+      <section className='container__crew'>
+        <div className='crew__image'>
+          <img className='crew__image__img' src={image} alt={`${member.name}-img`} />
+          {/* css */}
           {useWindowWidth() <= 375 &&
             <div className='crew__line'>
               <div></div>
             </div>
           }
         </div>
-        <div>
+        <div className='crew__content'>
           <div ref={selectRef} className='crew__select'>
             <button id='douglas' className='crew__select__link' onClick={() => {setMemberIndex(0)}}></button>
             <button id='mark' className='crew__select__link' onClick={() => {setMemberIndex(1)}}></button>

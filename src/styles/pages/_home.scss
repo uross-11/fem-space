@@ -5,8 +5,6 @@
   @include breakpoint-up (large) {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 75px;
     text-align: left;
   }
 
@@ -67,6 +65,7 @@
       height: 274px;
       width: 274px;
       margin: 0;
+      margin-top: 108px;
     }
   }
 }

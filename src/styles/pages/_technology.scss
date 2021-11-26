@@ -2,7 +2,10 @@
   text-align: center;
 
   &__h5 {
-    margin-top: 24px;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
 
     span {
       margin-right: 8px;
@@ -14,10 +17,18 @@
   &__image {
     margin-top: 32px;
     width: 100%;
+
+    @include breakpoint-up(medium) {
+      margin-top: 60px;
+    }
   }
 
   &__select {
     margin-top: 34px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 56px;
+    }
 
     &__link {
       cursor: pointer;
@@ -26,6 +37,11 @@
       border: 1px rgba($color: #fff, $alpha: 0.25) solid;
       border-radius: 50%;
       background: none;
+
+      @include breakpoint-up(medium) {
+        height: 60px;
+        width: 60px;
+      }
 
       &:hover {
         border: 1px #fff solid;
@@ -47,10 +63,18 @@
   &__term {
     display: block;
     margin-top: 26px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 44px;
+    }
   }
 
   &__name {
     margin-top: 9px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 16px;
+    }
   }
 
   &__text {

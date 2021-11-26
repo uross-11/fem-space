@@ -7,11 +7,9 @@
   }
 
   &__h5 {
-    margin-top: 24px;
 
     @include breakpoint-up(medium) {
       text-align: left;
-      margin-top: 40px;
     }
 
     @include breakpoint-up(xlarge) {
