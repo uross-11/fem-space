@@ -1,6 +1,10 @@
 .crew {
   text-align: center;
 
+  @include breakpoint-up(medium) {
+    height: 87%;
+  }
+
   &__h5 {
 
     @include breakpoint-up(medium) {
@@ -36,6 +40,10 @@
   }
 
   &__image {
+
+    @include breakpoint-up(medium) {
+
+    }
 
     &__img {
       height: 223px;

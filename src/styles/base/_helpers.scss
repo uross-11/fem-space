@@ -57,6 +57,7 @@
   &__crew {
 
     @include breakpoint-up(medium) {
+      height: 100%;
       margin: 0 88px;
     }
   }
