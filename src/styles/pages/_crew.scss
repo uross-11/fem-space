@@ -9,6 +9,10 @@
     text-align: left;
   }
 
+  @include breakpoint-up(xlarge) {
+    height: calc(100% - 246px);
+  }
+
   &__h5 {
 
     @include breakpoint-up(medium) {
@@ -69,19 +73,25 @@
 
     @include breakpoint-up(medium) {
       overflow: hidden;
-      position: relative;
-      max-height: 532px;
+      height: 532px;
     }
 
     @include breakpoint-up(large) {
       width: 550px;
-      height: 700px;
+      height: 550px;
+      align-self: flex-end;
+    }
+
+    @include breakpoint-up(xlarge) {
+      width: 550px;
+      height: 675px;
     }
 
     &__img {
       max-height: 223px;
       margin-top: 32px;
       object-fit: contain;
+      object-position: bottom;
       width: 100%;
       height: 100%;
 
@@ -91,17 +101,14 @@
       }
 
       @include breakpoint-up(large) {
-        position: absolute;
-        bottom: -5px;
-        width: 100%;
         max-height: 650px;
         max-width: 450px;
-        object-fit: contain;
         margin-top: 0;
       }
 
       @include breakpoint-up(xlarge) {
         max-width: 650px;
+        max-height: 750px;
       }
     }
   }
@@ -171,6 +178,7 @@
     margin-top: 8px;
 
     @include breakpoint-up(xlarge) {
+      white-space: nowrap;
       margin-top: 15px;
     }
   }
