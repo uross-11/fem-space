@@ -1,8 +1,12 @@
 .crew {
   text-align: center;
-
+  
   @include breakpoint-up(medium) {
-    height: 87%;
+    height: calc(100% - 95px);
+  }
+
+  @include breakpoint-up(large) {
+    text-align: left;
   }
 
   &__h5 {
@@ -11,10 +15,22 @@
       text-align: left;
     }
 
+    @include breakpoint-up(xlarge) {
+      margin-top: 76px;
+    }
+
     span {
       margin-right: 8px;
       font-weight: bold;
       opacity: 0.25;
+
+      @include breakpoint-up (medium) {
+        margin-right: 19px;
+      }
+
+      @include breakpoint-up (large) {
+        margin-right: 28px;
+      }
     }
   }
 
@@ -27,6 +43,7 @@
     }
 
     @include breakpoint-up(large) {
+      height: 100%;
       flex-direction: row-reverse;
     }
   }
@@ -37,21 +54,45 @@
       display: flex;
       flex-direction: column-reverse;
     }
+
+    @include breakpoint-up(large) {
+      justify-content: flex-end;
+    }
+
+    @include breakpoint-up(xlarge) {
+    }
   }
 
   &__image {
+    width: 100%;
 
-    @include breakpoint-up(medium) {
-
+    @include breakpoint-up(large) {
+      position: relative;
+      width: 550px;
+      height: 700px;
     }
 
     &__img {
-      height: 223px;
+      max-height: 223px;
+      object-fit: contain;
       margin-top: 32px;
-      background-size: contain;
 
       @include breakpoint-up(medium) {
-        height: 532px;
+        margin-top: 0;
+      }
+
+      @include breakpoint-up(large) {
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        max-height: 650px;
+        max-width: 450px;
+        object-fit: contain;
+        margin-top: 0;
+      }
+
+      @include breakpoint-up(xlarge) {
+        max-width: 650px;
       }
     }
   }
@@ -71,6 +112,11 @@
       margin-bottom: 40px;
     }
 
+    @include breakpoint-up(xlarge) {
+      position: absolute;
+      bottom: 94px;
+    }
+
     &__link {
       cursor: pointer;
       height: 10px;
@@ -79,6 +125,11 @@
       border-radius: 50%;
       background: $white;
       opacity: 0.17;
+
+      @include breakpoint-up(large) {
+        height: 15px;
+        width: 15px;
+      }
 
       &:hover {
         opacity: 0.5;
@@ -102,18 +153,35 @@
     @include breakpoint-up(medium) {
       margin-top: 60px;
     }
+
+    @include breakpoint-up(xlarge) {
+      margin-top: 154px;
+    }
   }
 
   &__name {
     margin-top: 8px;
+
+    @include breakpoint-up(xlarge) {
+      margin-top: 15px;
+    }
   }
 
-  &__text {
+  &__p {
     margin-top: 16px;
     margin-bottom: 54px;
 
     @include breakpoint-up(medium) {
       margin-bottom: 40px;
+    }
+
+    @include breakpoint-up(large) {
+      width: 444px;
+    }
+
+    @include breakpoint-up(xlarge) {
+      margin-top: 27px;
+      margin-bottom: 0;
     }
   }
 }

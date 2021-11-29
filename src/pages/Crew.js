@@ -33,10 +33,10 @@ const Crew = ({ crew }) => {
             <button id='victor' className='crew__select__link' onClick={() => {setMemberIndex(2)}}></button>
             <button id='anousheh' className='crew__select__link' onClick={() => {setMemberIndex(3)}}></button>
           </div>
-          <div>
+          <div className='crew__text'>
             <h4 className='crew__role'>{member.role.toUpperCase()}</h4>
             <h3 className='crew__name'>{member.name.toUpperCase()}</h3>
-            <p className='crew__text'>{member.bio}</p>
+            <p className='crew__p'>{member.bio}</p>
           </div>
         </div>
       </section>

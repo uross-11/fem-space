@@ -3,27 +3,15 @@ html {
   margin: 0;
 
   background-color: #202020;
-
-  @include breakpoint-up(medium) {
-    overflow: hidden;
-  }
-
-  @include breakpoint-up(large) {
-    overflow: unset;
-  }
 }
 
 html,
 body,
 #root {
-  height: 100vh;
+  height: 100%;
 }
 
 #root {
-
-  @include breakpoint-up(medium) {
-    overflow: hidden;
-  }
 }
 
 *,

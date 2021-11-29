@@ -67,6 +67,7 @@ h3 {
 
   @include breakpoint-up(large) {
     font-size: 56px;
+    line-height: 64.18px;
   }
 }
 
@@ -80,6 +81,7 @@ h4 {
 
   @include breakpoint-up(large) {
     font-size: 32px;
+    line-height: 36.67px;
   }
 }
 

@@ -1,6 +1,5 @@
 .destination {
   text-align: center;
-  height: 100%;
 
   @include breakpoint-up(large) {
     text-align: left;

@@ -1,16 +1,32 @@
 .technology {
   text-align: center;
 
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
   &__h5 {
 
     @include breakpoint-up(medium) {
       text-align: left;
     }
 
+    @include breakpoint-up(xlarge) {
+      margin-top: 76px;
+    }
+
     span {
       margin-right: 8px;
       font-weight: bold;
       opacity: 0.25;
+
+      @include breakpoint-up (medium) {
+        margin-right: 19px;
+      }
+
+      @include breakpoint-up (large) {
+        margin-right: 28px;
+      }
     }
   }
 
@@ -22,10 +38,40 @@
       margin-top: 60px;
     }
 
+    @include breakpoint-up(large) {
+      width: 515px;
+      margin-top: 26px;
+    }
+
     img {
       width: 100%;
-      height: 310px;
-      object-fit: cover;
+
+      @include breakpoint-up(medium) {
+        height: 310px;
+        object-fit: cover;
+      }
+
+      @include breakpoint-up(large) {
+        height: 527px;
+      }
+    }
+  }
+
+  section {
+
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 130px;
+    }
+  }
+
+  &__content {
+
+    @include breakpoint-up(large) {
+      display: flex;
+      margin-top: 137px;
     }
   }
 
@@ -34,6 +80,13 @@
 
     @include breakpoint-up(medium) {
       margin-top: 56px;
+    }
+
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 0;
     }
 
     &__link {
@@ -49,12 +102,21 @@
         width: 60px;
       }
 
+      @include breakpoint-up(large) {
+        height: 80px;
+        width: 80px;
+      }
+
       &:hover {
         border: 1px #fff solid;
       }
 
       &:not(:last-child) {
         margin-right: 16px;
+
+        @include breakpoint-up(large) {
+          margin-right: 0;
+        }
       }
     }
 
@@ -66,12 +128,23 @@
     }
   }
 
+  &__text {
+
+    @include breakpoint-up(large) {
+      margin-left: 80px;
+    }
+  }
+
   &__term {
     display: block;
     margin-top: 26px;
 
     @include breakpoint-up(medium) {
       margin-top: 44px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: 0;
     }
   }
 
@@ -81,10 +154,18 @@
     @include breakpoint-up(medium) {
       margin-top: 16px;
     }
+
+    @include breakpoint-up(xlarge) {
+      white-space: nowrap;
+    }
   }
 
-  &__text {
+  &__p {
     margin-top: 16px;
     margin-bottom: 81px;
+
+    @include breakpoint-up(large) {
+      width: 444px;
+    }
   }
 }

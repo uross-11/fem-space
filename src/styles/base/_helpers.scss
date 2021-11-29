@@ -22,7 +22,7 @@
     }
 
     @include breakpoint-up(xlarge) {
-      margin-left: 167px;
+      margin-left: 165px;
     }
   }
   
@@ -39,6 +39,7 @@
   }
 
   &__destination {
+    margin: 0 24px;
 
     @include breakpoint-up(medium) {
       margin: 0 97px;
@@ -55,17 +56,29 @@
   }
 
   &__crew {
+    margin: 0 24px;
 
     @include breakpoint-up(medium) {
       height: 100%;
       margin: 0 88px;
     }
+
+    @include breakpoint-up(large) {
+      height: unset;
+      margin-left: 165px;
+    }
   }
 
   &__technology {
+    margin: 0 24px;
 
     @include breakpoint-up(medium) {
       margin: 0 155px;
+    }
+
+    @include breakpoint-up(large) {
+      margin: 0;
+      margin-left: 155px;
     }
   }
 }
