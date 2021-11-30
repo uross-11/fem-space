@@ -81,7 +81,12 @@
     }
 
     @include breakpoint-up(large) {
-      margin: 0;
+      margin-right: 0;
+      margin-left: 105px;
+    }
+
+    @include breakpoint-up(xlarge) {
+      margin-right: 0;
       margin-left: 155px;
     }
   }

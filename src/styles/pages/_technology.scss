@@ -49,9 +49,14 @@
       @include breakpoint-up(medium) {
         height: 310px;
         object-fit: cover;
+        object-position: bottom;
       }
 
       @include breakpoint-up(large) {
+        height: 375px;
+      }
+
+      @include breakpoint-up(xlarge) {
         height: 527px;
       }
     }
@@ -63,7 +68,11 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      gap: 130px;
+      gap: 75px;
+    }
+
+    @include breakpoint-up(xlarge) {
+      gap: 150px;
     }
   }
 
@@ -71,6 +80,10 @@
 
     @include breakpoint-up(large) {
       display: flex;
+      margin-top: 60px;
+    }
+
+    @include breakpoint-up(xlarge) {
       margin-top: 137px;
     }
   }

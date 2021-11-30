@@ -4,7 +4,8 @@ h3,
 h4,
 p,
 .subheading1,
-.explore {
+.explore,
+.technology__select__link {
   color: $white;
   font-family: 'Bellefair', serif;
   font-style: normal;
@@ -29,8 +30,8 @@ p {
 }
 
 h1 {
-  font-size: 80px;
-  line-height: 100px;
+  font-size: rem(80);
+  line-height: rem(100);
 
   @include breakpoint-up(medium) {
     font-size: 150px;
@@ -223,4 +224,19 @@ p {
 
 .technology__select__link {
   color: $white;
+  font-size: 16px;
+  line-height: 18.34px;
+  letter-spacing: 1px;
+
+  @include breakpoint-up(medium) {
+    font-size: 24px;
+    line-height: 27.5px;
+    letter-spacing: 1.5px;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 32px;
+    line-height: 36.67px;
+    letter-spacing: 2px;
+  }
 }

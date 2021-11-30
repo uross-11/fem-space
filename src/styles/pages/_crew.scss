@@ -127,8 +127,12 @@
       margin-top: 0;
     }
 
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       position: absolute;
+      bottom: 75px;
+    }
+
+    @include breakpoint-up(xlarge) {
       bottom: 94px;
     }
 
@@ -177,8 +181,11 @@
   &__name {
     margin-top: 8px;
 
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       white-space: nowrap;
+    }
+
+    @include breakpoint-up(xlarge) {
       margin-top: 15px;
     }
   }

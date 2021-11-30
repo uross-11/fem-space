@@ -185,4 +185,9 @@
   &__traveltime {
     margin-bottom: 58px;
   }
+
+  &__distance,
+  &__traveltime {
+    white-space: nowrap;
+  }
 }
