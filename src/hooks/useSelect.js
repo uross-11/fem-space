@@ -3,15 +3,33 @@ import { useEffect } from 'react';
 const useSelect = (ref, page) => {
 
   useEffect(() => {
-    const arr = ref.current.children;
-    const len = arr.length;
-    const name = page.name.split(' ')[0].toLowerCase();
+    if (ref && page) {
+      const arr = ref.current.children;
+      const len = arr.length;
+      let name;
 
-    for (let i = 0; i < len; i++) {
-      if (arr[i].id === name) {
-        arr[i].classList.add('selected');
+      // merge into 1 for loop! change arr[i]
+      if(page.name) {
+        name = page.name.split(' ')[0].toLowerCase();
+        for (let i = 0; i < len; i++) {
+          if (arr[i].id === name) {
+            arr[i].classList.add('selected');
+          } else {
+            arr[i].classList.remove('selected');
+          }
+        }
       } else {
-        arr[i].classList.remove('selected');
+        name = page.split('/')[1];
+        if (!name) {
+          name = 'home';
+        }
+        for (let i = 0; i < len; i++) {
+          if (arr[i].innerText.toLowerCase().replace(/[0-9]/g, '') === name) {
+            arr[i].classList.add('selected');
+          } else {
+            arr[i].classList.remove('selected');
+          }
+        }
       }
     }
   })

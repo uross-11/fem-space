@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useImportImages, useSwitchImage, useWindowWidth } from '../hooks/helpers';
+import { useImportImages, useSwitchImage } from '../hooks/helpers';
 import useSelect from '../hooks/useSelect';
 
 const Crew = ({ crew }) => {
@@ -19,12 +19,9 @@ const Crew = ({ crew }) => {
       <section className='container__crew'>
         <div className='crew__image'>
           <img className='crew__image__img' src={image} alt={`${member.name}-img`} />
-          {/* css */}
-          {useWindowWidth() <= 375 &&
-            <div className='crew__line'>
-              <div></div>
-            </div>
-          }
+          <div className='crew__line show-for-mobile'>
+            <div></div>
+          </div>
         </div>
         <div className='crew__content'>
           <div ref={selectRef} className='crew__select'>

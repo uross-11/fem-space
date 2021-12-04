@@ -1,6 +1,4 @@
 .header {
-  /* desktop */
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,6 +10,7 @@
   }
 
   @include breakpoint-up(large) {
+    position: relative;
     margin-left: 55px;
     align-items: center;
   }
@@ -77,7 +76,16 @@
       padding-left: 123px;
     }
 
+    .selected,
+    .selected:hover {
+      border-bottom: 3px white solid;
+    }
+
     &__link {
+
+      &:hover {
+        border-bottom: 3px hsl(231, 77%, 90%) solid;
+      }
 
       span {
         margin-right: 11px;
@@ -100,6 +108,7 @@
           margin-right: 48px;
         }
       }
+
     }
   }
 

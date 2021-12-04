@@ -220,6 +220,12 @@ p {
   color: hsl(231, 77%, 90%);
   font-size: 14px;
   letter-spacing: 2.3625px;
+
+  @include breakpoint-up(medium) {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+  }
 }
 
 .technology__select__link {

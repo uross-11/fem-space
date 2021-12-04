@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/shared/logo.svg'
+import useSelect from '../hooks/useSelect';
+import Sidebar from './Sidebar';
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -30,6 +32,8 @@ const Header = () => {
     }
   }, [isSidebarOpen, location])
 
+  useSelect(selectRef, location);
+
   useEffect(() => {
     setIsSidebarOpen(false);
   }, [location])
@@ -40,7 +44,7 @@ const Header = () => {
         <img className='header__logo' src={logo} alt={`logo-img`} />
       </Link>
       <div className='header__line hide-for-tablet'></div>
-      <div className='header__links hide-for-mobile'>
+      <div ref={selectRef} className='header__links hide-for-mobile'>
         <Link to='/' className='header__links__link'>
           <span className='hide-for-tablet'>00</span>
           HOME
@@ -61,14 +65,7 @@ const Header = () => {
       <button onClick={() => {setIsSidebarOpen(!isSidebarOpen)}} className='header__toggle show-for-mobile'>
         <span></span><span></span><span></span>
       </button>
-      {isSidebarOpen && 
-        <div id='header-select' ref={selectRef} className='header__sidebar'>
-          <Link id='/' to='/' className='header__sidebar__link'><span>00</span> HOME</Link>
-          <Link id='/destination' to='/destination' className='header__sidebar__link'><span>01</span> DESTINATION</Link>
-          <Link id='/crew' to='/crew' className='header__sidebar__link'><span>02</span> CREW</Link>
-          <Link id='/technology' to='/technology' className='header__sidebar__link'><span>03</span> TECHNOLOGY</Link>
-        </div>
-      }
+      {isSidebarOpen && <Sidebar isSidebarOpen={isSidebarOpen} />}
     </nav>
   );
 }
