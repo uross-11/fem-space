@@ -10,33 +10,20 @@ const Header = () => {
   const selectRef = useRef();
   const location = useLocation().pathname;
 
+  /* useSelect(selectRef, location); */
+
   useEffect(() => {
     if (isSidebarOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-
-    // Replace with useSelect hook!
-    if (selectRef.current) {
-      const arr = selectRef.current.children;
-      const len = arr.length;
-
-      for (let i = 0; i < len; i++) {
-        if (arr[i].id === location) {
-          arr[i].classList.add('selected');
-        } else {
-          arr[i].classList.remove('selected');
-        }
-      }
-    }
   }, [isSidebarOpen, location])
 
-  useSelect(selectRef, location);
 
-  useEffect(() => {
+  /* useEffect(() => {
     setIsSidebarOpen(false);
-  }, [location])
+  }, [location]) */
 
   return (
     <nav className='header container__header'>
