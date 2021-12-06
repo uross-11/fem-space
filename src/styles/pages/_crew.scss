@@ -1,11 +1,15 @@
 .crew {
   text-align: center;
+  position: relative;
+  min-height: 800px;
   
   @include breakpoint-up(medium) {
     height: calc(100% - 162px);
   }
 
   @include breakpoint-up(large) {
+    min-height: 600px;
+    max-height: 830px;
     text-align: left;
   }
 
@@ -65,6 +69,7 @@
     }
 
     @include breakpoint-up(xlarge) {
+      margin-right: 200px;
     }
   }
 

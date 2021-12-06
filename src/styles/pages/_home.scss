@@ -15,7 +15,12 @@
 
   &__content {
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
+      margin-right: 386px;
+    }
+
+    @include breakpoint-up(fullhd) {
+      margin-right: 600px;
     }
   }
 
@@ -46,6 +51,7 @@
   }
 
   &__cta {
+    position: relative;
     cursor: pointer;
     margin-top: 81px;
     margin-bottom: 48px;
@@ -66,6 +72,27 @@
       width: 274px;
       margin: 0;
       margin-top: 108px;
+    }
+
+    &:hover::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+
+      @include breakpoint-up(large) {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translate(-16%, -16%);
+        width: 400px;
+        height: 400px;
+      }
+
+      @include breakpoint-up(xlarge) {
+        height: 450px;
+        width: 450px;
+        transform: translate(-20%, -20%);
+      }
     }
   }
 }

@@ -90,6 +90,21 @@
       margin-left: 155px;
     }
   }
+
+  &__home,
+  &__destination,
+  &__crew,
+  &__technology,
+  &__header {
+    
+    @include breakpoint-up(fullhd) {
+      position: absolute;
+      max-width: 1440px;
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .hide-for-mobile {

@@ -10,7 +10,7 @@ const Header = () => {
   const selectRef = useRef();
   const location = useLocation().pathname;
 
-  /* useSelect(selectRef, location); */
+  useSelect(selectRef, location);
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -21,9 +21,9 @@ const Header = () => {
   }, [isSidebarOpen, location])
 
 
-  /* useEffect(() => {
+  useEffect(() => {
     setIsSidebarOpen(false);
-  }, [location]) */
+  }, [location])
 
   return (
     <nav className='header container__header'>

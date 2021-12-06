@@ -67,6 +67,10 @@
       width: 445px;
       height: 445px;
     }
+
+    @include breakpoint-up(fullhd) {
+      margin-right: 157px;
+    }
   }
 
   &__content {
