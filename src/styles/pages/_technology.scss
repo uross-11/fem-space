@@ -80,11 +80,6 @@
 
     @include breakpoint-up(large) {
       display: flex;
-      margin-top: 60px;
-    }
-
-    @include breakpoint-up(xlarge) {
-      margin-top: 137px;
     }
   }
 

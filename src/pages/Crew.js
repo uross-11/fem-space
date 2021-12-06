@@ -19,9 +19,7 @@ const Crew = ({ crew }) => {
       <section className='container__crew'>
         <div className='crew__image'>
           <img className='crew__image__img' src={image} alt={`${member.name}-img`} />
-          <div className='crew__line show-for-mobile'>
-            <div></div>
-          </div>
+          <div className='crew__line'></div>
         </div>
         <div className='crew__content'>
           <div ref={selectRef} className='crew__select'>

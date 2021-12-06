@@ -13,7 +13,7 @@ const Destination = ({ destinations }) => {
   useSelect(selectRef, planet);
 
   return (
-    <div className='destination container'>
+    <div className='destination'>
       <h5 className='destination__h5 container__h5'><span>01</span> PICK YOUR DESTINATION</h5>
       <section className='container__destination'>
         <img className='destination__image' src={image} alt={`${planet.name}-img`} />

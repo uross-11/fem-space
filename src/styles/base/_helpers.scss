@@ -11,6 +11,7 @@
 
   &__h5 {
     margin-top: 24px;
+    max-width: 1440px;
 
     @include breakpoint-up(medium) {
       margin-top: 40px;
@@ -23,6 +24,10 @@
 
     @include breakpoint-up(xlarge) {
       margin-left: 165px;
+    }
+
+    @include breakpoint-up(fullhd) {
+      margin: auto;
     }
   }
   
@@ -74,20 +79,26 @@
   }
 
   &__technology {
-    margin: 0 24px;
 
-    @include breakpoint-up(medium) {
-      margin: 0 155px;
-    }
+    .technology__content {
+      margin: 0 24px;
 
-    @include breakpoint-up(large) {
-      margin-right: 0;
-      margin-left: 105px;
-    }
+      @include breakpoint-up(medium) {
+        margin: 0 155px;
+      }
 
-    @include breakpoint-up(xlarge) {
-      margin-right: 0;
-      margin-left: 155px;
+      @include breakpoint-up(large) {
+        margin-right: 0;
+        margin-left: 105px;
+        margin-top: 60px;
+      }
+
+      @include breakpoint-up(xlarge) {
+        margin-right: 0;
+        margin-left: 155px;
+        margin-top: 137px;
+      }
+
     }
   }
 
