@@ -4,17 +4,18 @@
   min-height: 800px;
   
   @include breakpoint-up(medium) {
-    height: calc(100% - 162px);
+    height: calc(100vh - 164px);
   }
 
   @include breakpoint-up(large) {
-    min-height: 600px;
+    height: calc(100vh - 169px);
+    min-height: 495px;
     max-height: 602px;
     text-align: left;
   }
 
   @include breakpoint-up(xlarge) {
-    height: calc(100% - 246px);
+    height: calc(100vh - 246px);
     max-height: 650px;
   }
 
@@ -84,7 +85,7 @@
 
     @include breakpoint-up(large) {
       width: 550px;
-      height: 550px;
+      height: 500px;
       align-self: flex-end;
     }
 

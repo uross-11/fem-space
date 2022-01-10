@@ -188,6 +188,10 @@
 
   &__traveltime {
     margin-bottom: 58px;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 32px;
+    }
   }
 
   &__distance,
