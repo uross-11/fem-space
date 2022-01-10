@@ -15,7 +15,8 @@
   }
 
   @include breakpoint-up(xlarge) {
-    height: calc(100vh - 246px);
+    height: calc(100vh - 252px);
+    min-height: 600px;
     max-height: 650px;
   }
 
@@ -176,6 +177,7 @@
 
       &:hover {
         opacity: 0.5;
+        transition: 300ms ease-in-out;
       }
 
       &:not(:last-child) {

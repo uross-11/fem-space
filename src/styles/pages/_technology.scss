@@ -117,6 +117,7 @@
 
       &:hover {
         border: 1px #fff solid;
+        transition: 300ms ease-in-out;
       }
 
       &:not(:last-child) {

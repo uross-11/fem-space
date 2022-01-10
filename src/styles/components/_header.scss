@@ -86,9 +86,11 @@
     }
 
     &__link {
+        border-bottom: 3px transparent solid;
 
       &:hover {
         border-bottom: 3px hsl(231, 77%, 90%) solid;
+        transition: 300ms ease-in-out;
       }
 
       span {

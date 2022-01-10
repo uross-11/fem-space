@@ -13,9 +13,8 @@ body,
 
 #root {
 
-  
-
   @include breakpoint-up(large) {
+    overflow: hidden;
   }
 }
 
