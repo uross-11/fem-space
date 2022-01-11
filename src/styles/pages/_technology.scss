@@ -1,5 +1,6 @@
 .technology {
   text-align: center;
+  transition: 300ms ease-in-out;
 
   @include breakpoint-up(large) {
     text-align: left;

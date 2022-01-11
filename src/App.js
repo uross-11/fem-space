@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { useTransition, animated } from 'react-spring';
 
 import data from './data.json';
 
@@ -12,18 +13,27 @@ import Technology from './pages/Technology';
 import './styles/main.scss';
 
 const App = () => {
-  return (
-    <Router>
+
+  const location = useLocation();
+  const transitions = useTransition(location, {
+    from: { opacity: 0, transform: "translate(100%, 0)" },
+    enter: { opacity: 1, transform: "translate(0%, 0)" },
+  });
+
+  return transitions((props, item) => (
+    <>
       <Background />
       <Header />
-      <Routes>
-        <Route exact path='/' element={<Home/>} />
-        <Route path='/destination' element={<Destination {...data}/>} />
-        <Route path='/crew' element={<Crew {...data} />} />
-        <Route path='/technology' element={<Technology {...data} />} />
-      </Routes>
-    </Router>
-  );
+        <animated.div style={props}>
+          <Routes location={item}>
+            <Route exact path='/' element={<Home/>} />
+            <Route path='/destination' element={<Destination {...data}/>} />
+            <Route path='/crew' element={<Crew {...data} />} />
+            <Route path='/technology' element={<Technology {...data} />} />
+          </Routes>
+        </animated.div>
+    </>
+  ));
 }
 
 export default App;
