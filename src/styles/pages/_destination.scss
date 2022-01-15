@@ -189,10 +189,10 @@
   }
 
   &__traveltime {
-    margin-bottom: 58px;
+    padding-bottom: 58px;
 
     @include breakpoint-up(large) {
-      margin-bottom: 32px;
+      padding-bottom: 32px;
     }
   }
 

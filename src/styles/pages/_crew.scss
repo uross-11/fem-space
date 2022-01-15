@@ -1,10 +1,10 @@
 .crew {
   text-align: center;
   position: relative;
-  min-height: 800px;
   
   @include breakpoint-up(medium) {
     height: calc(100vh - 164px);
+    min-height: 880px;
   }
 
   @include breakpoint-up(large) {
