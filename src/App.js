@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Route, Routes, useLocation } from "react-router-dom";
 import { useTransition, animated } from 'react-spring';
 
 import data from './data.json';
