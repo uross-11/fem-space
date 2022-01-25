@@ -1,4 +1,4 @@
-import { BrowserRouter as Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Route, Switch, useLocation } from "react-router-dom";
 import { useTransition, animated } from 'react-spring';
 
 import data from './data.json';
@@ -25,12 +25,20 @@ const App = () => {
       <Background />
       <Header />
         <animated.div style={props}>
-          <Routes location={item}>
-            <Route exact path='/' element={<Home/>} />
-            <Route path='/destination' element={<Destination {...data}/>} />
-            <Route path='/crew' element={<Crew {...data} />} />
-            <Route path='/technology' element={<Technology {...data} />} />
-          </Routes>
+          <Switch location={item}>
+            <Route exact path='/'>
+              <Home/>
+            </Route>
+            <Route path='/destination'>
+              <Destination {...data}/>
+            </Route>
+            <Route path='/crew'>
+              <Crew {...data} />
+            </Route>
+            <Route path='/technology'>
+              <Technology {...data} />
+            </Route>
+          </Switch>
         </animated.div>
     </>
   ));
