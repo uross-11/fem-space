@@ -1,24 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useImportImages, useSwitchImage, useWindowWidth } from '../hooks/helpers';
 import useSelect from '../hooks/useSelect';
+import { useGlobalContext } from '../context';
 
-const Technology = ({ technology }) => {
-  const [techIndex, setTechIndex] = useState(0);
-  const tech = technology[techIndex];
-  const width = useWindowWidth();
-  const [orientation, setOrientation] = useState('');
-
-  useEffect(() => {
-    if (width > 1024) {
-      setOrientation('portrait')
-    } else {
-      setOrientation('landscape')
-    }
-  }, [width])
-  
-  const check = tech.name.toLowerCase().split(' ')[0];
-  const images = useImportImages();
-  const image = useSwitchImage(images, check, orientation);
+const Technology = () => {
+  const {tech, technologyImage, setTechIndex} = useGlobalContext();
 
   const selectRef = useRef();
   useSelect(selectRef, tech);
@@ -28,7 +13,7 @@ const Technology = ({ technology }) => {
       <h5 className='technology__h5 container__h5'><span>03</span> SPACE LAUNCH 101</h5>
       <section className='container__technology'>
         <div className="technology__image">
-          <img src={image} alt={`${tech.name}-img`} />
+          <img src={technologyImage} alt={`${tech.name}-img`} />
         </div>
         <div className='technology__content'>
           <div ref={selectRef} className='technology__select'>

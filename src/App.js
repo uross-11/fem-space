@@ -1,7 +1,6 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Route, Switch, useLocation } from "react-router-dom";
 import { useTransition, animated } from 'react-spring';
-
-import data from './data.json';
 
 import Header from './components/Header';
 import Background from './components/Background';
@@ -9,6 +8,7 @@ import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
+import { useGlobalContext } from "./context";
 
 import './styles/main.scss';
 
@@ -24,22 +24,22 @@ const App = () => {
     <>
       <Background />
       <Header />
-        <animated.div style={props}>
-          <Switch location={item}>
-            <Route exact path='/'>
-              <Home/>
-            </Route>
-            <Route path='/destination'>
-              <Destination {...data}/>
-            </Route>
-            <Route path='/crew'>
-              <Crew {...data} />
-            </Route>
-            <Route path='/technology'>
-              <Technology {...data} />
-            </Route>
-          </Switch>
-        </animated.div>
+      <animated.div style={props}>
+        <Switch location={item}>
+          <Route exact path='/'>
+            <Home/>
+          </Route>
+          <Route path='/destination'>
+            <Destination />
+          </Route>
+          <Route path='/crew'>
+            <Crew />
+          </Route>
+          <Route path='/technology'>
+            <Technology />
+          </Route>
+        </Switch>
+      </animated.div>
     </>
   ));
 }

@@ -27,9 +27,9 @@ const Header = () => {
 
   return (
     <nav className='header container__header'>
-      <Link to='/'>
-        <img className='header__logo' src={logo} alt={`logo-img`} />
-      </Link>
+        <div>
+          <img className='header__logo' src={logo} alt={`logo-img`} />
+        </div>
       <div className='header__line hide-for-tablet'></div>
       <div ref={selectRef} className='header__links hide-for-mobile'>
         <Link to='/' className='header__links__link'>

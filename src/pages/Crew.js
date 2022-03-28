@@ -1,14 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { useImportImages, useSwitchImage } from '../hooks/helpers';
 import useSelect from '../hooks/useSelect';
+import { useGlobalContext } from '../context';
 
-const Crew = ({ crew }) => {
-  const [memberIndex, setMemberIndex] = useState(0);
-
-  const member = crew[memberIndex];
-  const images = useImportImages();
-  const check = member.name.split(' ')[0].toLowerCase(); 
-  const image = useSwitchImage(images, check);
+const Crew = () => {
+  const { member, memberImage, setMemberIndex } = useGlobalContext();
 
   const selectRef = useRef();
   useSelect(selectRef, member);
@@ -18,7 +13,7 @@ const Crew = ({ crew }) => {
       <h5 className='crew__h5 container__h5'><span>02</span> MEET YOUR CREW</h5>
       <section className='container__crew'>
         <div className='crew__image'>
-          <img className='crew__image__img' src={image} alt={`${member.name}-img`} />
+          <img className='crew__image__img' src={memberImage} alt={`${member.name}-img`} />
           <div className='crew__line'></div>
         </div>
         <div className='crew__content'>

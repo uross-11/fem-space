@@ -1,13 +1,11 @@
-import React, { useState, useRef } from 'react';
-import { useImportImages, useSwitchImage } from '../hooks/helpers';
+import React, { useState, useRef, useEffect } from 'react';
 import useSelect from '../hooks/useSelect';
+import { useGlobalContext } from '../context';
 
-const Destination = ({ destinations }) => {
-  const [planetIndex, setPlanetIndex] = useState(0);
-  const planet = destinations[planetIndex];
-  const images = useImportImages();
-  const check = planet.name.toLowerCase();
-  const image = useSwitchImage(images, check);
+import Loading from '../components/Loading';
+
+const Destination = () => {
+  const { planet, planetImage, setPlanetIndex } = useGlobalContext();
 
   const selectRef = useRef();
   useSelect(selectRef, planet);
@@ -16,7 +14,7 @@ const Destination = ({ destinations }) => {
     <div className='destination'>
       <h5 className='destination__h5 container__h5'><span>01</span> PICK YOUR DESTINATION</h5>
       <section className='container__destination'>
-        <img className='destination__image' src={image} alt={`${planet.name}-img`} />
+        <img className='destination__image' src={planetImage} alt={`${planet.name}-img`} />
         <div className='destination__content'>
           <div ref={selectRef} className='destination__select'>
             <button id='moon' className='destination__select__link' onClick={() => {setPlanetIndex(0)}}>MOON</button>
