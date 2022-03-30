@@ -1,8 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { useSelect } from '../hooks/helpers';
 import { useGlobalContext } from '../context';
-
-import Loading from '../components/Loading';
 
 const Destination = () => {
   const { planet, planetImage, setPlanetIndex } = useGlobalContext();

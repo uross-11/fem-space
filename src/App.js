@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { BrowserRouter as Route, Switch, useLocation } from "react-router-dom";
 import { useTransition, animated } from 'react-spring';
 
@@ -8,7 +7,6 @@ import Home from './pages/Home';
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
-import { useGlobalContext } from "./context";
 
 import './styles/main.scss';
 
