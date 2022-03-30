@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/shared/logo.svg'
-import useSelect from '../hooks/useSelect';
+import { useSelect } from '../hooks/helpers';
 import Sidebar from './Sidebar';
 
 const Header = () => {

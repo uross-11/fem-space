@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import useSelect from '../hooks/useSelect';
+import React, { useRef } from 'react';
+import { useSelect } from '../hooks/helpers';
 import { useGlobalContext } from '../context';
 
 const Crew = () => {

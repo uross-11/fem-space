@@ -1,6 +1,6 @@
-import React, { useRef} from 'react';
+import React, { useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import useSelect from '../hooks/useSelect';
+import { useSelect } from '../hooks/helpers';
 
 const Sidebar = ({ isSidebarOpen }) => {
   const selectRef = useRef();

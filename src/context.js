@@ -13,14 +13,14 @@ const AppProvider = ({ children }) => {
   const [techIndex, setTechIndex] = useState(0);
   const [orientation, setOrientation] = useState('');
 
+  const images = useImportImages();
 
   useEffect(() => {
-    if (data) {
+   if (data && images) {
       setLoading(false)
     }
-  }, []);
+  }, [images]);
 
-  const images = useImportImages();
 
   const { destinations, crew, technology } = data;
 
