@@ -8,7 +8,6 @@ export const useSelect = (ref, page) => {
       const len = arr.length;
       let name;
 
-      // merge into 1 for loop! change arr[i]
       if(page.name) {
         name = page.name.split(' ')[0].toLowerCase();
         for (let i = 0; i < len; i++) {
@@ -32,7 +31,7 @@ export const useSelect = (ref, page) => {
         }
       }
     }
-  })
+  }, [ref, page])
 }
 
 export const useImportImages = () => {

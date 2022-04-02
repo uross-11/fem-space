@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useSelect } from '../hooks/helpers';
 import { useGlobalContext } from '../context';
 

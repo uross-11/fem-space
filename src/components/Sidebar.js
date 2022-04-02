@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelect } from '../hooks/helpers';
 
